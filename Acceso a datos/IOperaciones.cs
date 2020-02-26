@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examen.Acceso_a_datos
+namespace Acceso_a_datos
 {
    public interface IOperaciones<T>
     {

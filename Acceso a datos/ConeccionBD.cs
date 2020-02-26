@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace Examen.Acceso_a_datos
+namespace Acceso_a_datos
 {
     public class ConeccionBD
 	{
@@ -71,10 +71,11 @@ namespace Examen.Acceso_a_datos
 			// Closing the connection  
 			finally
 			{
-				return null;
+				
 				cnn.Close();
 				
 			}
+			return null;
 		}
 		public void ConexionADO(string sql)
 		{

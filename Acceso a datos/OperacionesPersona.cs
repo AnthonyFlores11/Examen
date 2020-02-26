@@ -7,7 +7,7 @@ using Entidades;
 using Acceso_a_datos;
 using System.Data.SqlClient;
 
-namespace Examen.Acceso_a_datos
+namespace Acceso_a_datos
 {
      
     public class OperacionesPersona : IOperaciones<Persona>
