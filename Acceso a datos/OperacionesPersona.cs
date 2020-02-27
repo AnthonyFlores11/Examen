@@ -21,7 +21,7 @@ namespace Acceso_a_datos
             {
                 while (resultado.NextResult())
                 {
-                    return new Persona(resultado.GetInt32(0), resultado.GetString(1), resultado.GetString(2));
+                    return new Persona(resultado.GetInt32(0), resultado.GetString(1), resultado.GetString(2), resultado.GetString(3), resultado.GetString(4));
                 }
             }
             return null;
@@ -37,7 +37,7 @@ namespace Acceso_a_datos
             {
                 while (resultado.NextResult())
                 {
-                    persona.Add(new Persona (resultado.GetInt32(0), resultado.GetString(1), resultado.GetString(1)));
+                    persona.Add(new Persona(resultado.GetInt32(0), resultado.GetString(1), resultado.GetString(2), resultado.GetString(3), resultado.GetString(4)));
                 }
             }
             return null;
@@ -46,18 +46,20 @@ namespace Acceso_a_datos
 
         public void Eliminar(Persona item)
         {
-            throw new NotImplementedException();
+            string query = "DELETE FROM dbo.Persona VALUES(" + item.Id + " , " + item.Nombre + "," + item.Apellidos + ")";
+            SqlDataReader resultado = coneccion.ConexionSQLQuery(query);
         }
 
         public void Insertar(Persona item)
         {
-            string query = "INSERT INTO dbo.Persona VALUES("+ item.Id +" , "+ item.Nombre + ","+ item.Email +")";
+            string query = "INSERT INTO dbo.Persona VALUES("+ item.Id +" , "+ item.Nombre + ","+ item.Apellidos +")";
             SqlDataReader resultado = coneccion.ConexionSQLQuery(query);
         }
 
         public void Modificar(Persona item)
         {
-            throw new NotImplementedException();
+            string query = "UPDATE dbo.Persona VALUES(" + item.Id + " , " + item.Nombre + "," + item.Apellidos + ")";
+            SqlDataReader resultado = coneccion.ConexionSQLQuery(query);
         }
     }
 }

@@ -13,5 +13,6 @@ namespace Acceso_a_datos
         List<T> BuscarTodo();
         void Modificar(T item);
         void Eliminar(T item);
+
     }
 }
