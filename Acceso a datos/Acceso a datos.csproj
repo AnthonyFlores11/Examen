@@ -42,8 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConeccionBD.cs" />
-    <Compile Include="IOperaciones.cs" />
-    <Compile Include="OperacionesPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
