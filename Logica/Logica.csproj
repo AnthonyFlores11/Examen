@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOperaciones.cs" />
-    <Compile Include="OperacionesPersonas.cs" />
+    <Compile Include="LogicaOp.cs" />
+    <Compile Include="OperacionTelefono.cs" />
+    <Compile Include="OPPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

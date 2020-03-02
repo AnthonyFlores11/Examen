@@ -19,7 +19,7 @@ namespace Entidades
 
         public override void Telefonos()
         {
-            Console.WriteLine("La informacion del telefono es:", id, numero, descripcion);
+           // Console.WriteLine("La informacion del telefono es:", id, numero, descripcion);
         }
     }
 }

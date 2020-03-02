@@ -8,9 +8,13 @@ namespace Entidades
 {
    public abstract class Telefono
     {
-        protected int id;
-        protected int numero;
-        protected string descripcion;
+        private int id;
+        private int numero;
+        private string descripcion;
+
+        public int Id { get => id; set => id = value; }
+        public int Numero { get => numero; set => numero = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
 
         protected Telefono(int id, int numero, string descripcion)
         {

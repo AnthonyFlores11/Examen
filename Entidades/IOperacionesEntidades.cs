@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logica
+namespace Entidades
 {
-    public interface IOperaciones<T>
+   public interface IOperacionesEntidades<T>
     {
         void Insertar(T item);
         T Buscar(int id);
         T Buscar(string nombre);
-        List<T> BuscarTodo();
-        void Modificar(T item);
+        
         void Eliminar(T item);
         List<T> MostrarTodo();
         List<T> Mostrar();
-
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 using System.Data.SqlClient;
-using Acceso_a_datos;
 
-namespace Logica
+
+namespace Acceso_a_datos
 {
     public class OperacionesPersonas : IOperaciones<Persona>
     {
@@ -59,30 +59,21 @@ namespace Logica
 
         public void Eliminar(Persona item)
         {
-            string query = "DELETE FROM dbo.Persona VALUES(" + item.Id + " , " + item.Nombre + "," + item.Apellidos + ")";
-            SqlDataReader resultado = coneccion.ConexionSQLQuery(query);
+            string query = "DELETE FROM dbo.Persona";
+            coneccion.ConexionSQLNoQuery(query);
         }
 
         public void Insertar(Persona item)
         {
-            string query = "INSERT INTO dbo.Persona VALUES(" + item.Id + " , " + item.Nombre + "," + item.Apellidos + ")";
-            SqlDataReader resultado = coneccion.ConexionSQLQuery(query);
+            string query = "INSERT INTO dbo.Persona";
+            coneccion.ConexionSQLNoQuery(query);
         }
 
         public void Modificar(Persona item)
         {
-            string query = "UPDATE dbo.Persona VALUES(" + item.Id + " , " + item.Nombre + "," + item.Apellidos + ")";
-            SqlDataReader resultado = coneccion.ConexionSQLQuery(query);
-        }
-
-        public List<Persona> Mostrar()
-        {
             throw new NotImplementedException();
         }
 
-        public List<Persona> MostrarTodo()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
