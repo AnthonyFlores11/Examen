@@ -94,7 +94,7 @@ namespace Logica
                 {
                     foreach (Persona p in listPer)
                     {
-                        per.Add(p);
+                       per.Add(p);
                     }
                 }
             }

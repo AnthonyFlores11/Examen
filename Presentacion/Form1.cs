@@ -99,10 +99,8 @@ namespace Presentacion
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
-            if (DGVPersona.SelectedRows.Count > 0)
-            {
-                DGVPersona.Rows.Remove(DGVPersona.SelectedRows[0]);
-            }
+            Persona persona = new Persona();
+            Oper.Eliminar(persona);
         }
         private void btAgregarTel_Click(object sender, EventArgs e)
         {
