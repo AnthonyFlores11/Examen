@@ -34,6 +34,7 @@ namespace Presentacion
             this.txnombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.texCedula = new System.Windows.Forms.TextBox();
             this.btCargar = new System.Windows.Forms.Button();
             this.btSalvar = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@ namespace Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.texApellido = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVTelefonos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPersona)).BeginInit();
@@ -131,6 +131,17 @@ namespace Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1107, 598);
             this.panel1.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Salmon;
+            this.button1.Location = new System.Drawing.Point(998, 549);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 34);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // texCedula
             // 
@@ -246,6 +257,7 @@ namespace Presentacion
             this.BtBuscarPer.TabIndex = 17;
             this.BtBuscarPer.Text = "Buscar Persona";
             this.BtBuscarPer.UseVisualStyleBackColor = false;
+            this.BtBuscarPer.Click += new System.EventHandler(this.BtBuscarPer_Click);
             // 
             // texBuscar
             // 
@@ -366,17 +378,6 @@ namespace Presentacion
             this.Label3.Size = new System.Drawing.Size(69, 17);
             this.Label3.TabIndex = 3;
             this.Label3.Text = "Apellidos:";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Salmon;
-            this.button1.Location = new System.Drawing.Point(998, 549);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 34);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

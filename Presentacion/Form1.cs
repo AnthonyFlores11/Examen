@@ -62,7 +62,7 @@ namespace Presentacion
                                 Oper.Insertar(persona);
                                 listaP = Oper.MostrarTodo();
                                 DatosTabla(listaP);
-                               
+                                
 
                                 LimpiarCampos();
                                 if (listaP!=null){
@@ -99,9 +99,11 @@ namespace Presentacion
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
-            
+            if (DGVPersona.SelectedRows.Count > 0)
+            {
+                DGVPersona.Rows.Remove(DGVPersona.SelectedRows[0]);
+            }
         }
-
         private void btAgregarTel_Click(object sender, EventArgs e)
         {
             if(textTel.TextLength == 0)
@@ -142,6 +144,11 @@ namespace Presentacion
             texID.Text = DGVPersona.CurrentRow.ToString();
             textEmail.Text = DGVPersona.CurrentRow.ToString();
             
+        }
+
+        private void BtBuscarPer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
